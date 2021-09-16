@@ -8,13 +8,13 @@ function jumpto
     exit
 }
 
-sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
 
 #instal basic functions
 sudo apt install fortune-mod cowsay -y
 
 #add alias and fortune
-echo -e "\nalias update='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y'" >> .bashrc
+echo -e "\nalias update='sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y'" >> .bashrc
 echo -e "\nfortune | cowsay" >> .bashrc
 
 #install webmin
